@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "change-me-for-local-development"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
+    refresh_token_expire_days: int = 7
+    refresh_token_cookie_name: str = "tm_refresh_token"
+    refresh_token_cookie_secure: bool = False
 
     @field_validator("backend_cors_origins", mode="before")
     @classmethod

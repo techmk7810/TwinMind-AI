@@ -1,4 +1,5 @@
 import { Activity, Database, Server } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const foundationItems = [
@@ -38,7 +39,14 @@ export default function Home() {
           ))}
         </div>
 
-        <Button type="button">Project foundation ready</Button>
+        <div className="flex flex-wrap gap-3">
+          <Button asChild>
+            <Link href="/login">Log in</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/register">Create account</Link>
+          </Button>
+        </div>
       </section>
     </main>
   );
